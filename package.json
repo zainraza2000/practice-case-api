@@ -1,0 +1,13 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "Node.js Express API for searching data based on type and query",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Your Name",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
