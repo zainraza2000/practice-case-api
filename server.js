@@ -16,6 +16,19 @@ app.get('/search', (req, res) => {
     res.json(filteredData);
 });
 
+app.get('/search-professions', (req, res) => {
+    const { query } = req.query;
+
+    if (!query) {
+        return res.status(400).json({ error: "Query parameter is required." });
+    }
+
+    // Filtering the professionsData based on the query
+    const filteredProfessions = professionsData.filter(profession => profession.name.toLowerCase().includes(query.toLowerCase()));
+
+    res.json(filteredProfessions);
+});
+
 const PORT = 3001;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
